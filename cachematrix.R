@@ -25,8 +25,8 @@ cacheSolve <- function(x, ...) {
     ## Message("Retrieving cached matrix.")
     return(inv)
   }
-  plMatr <- x$get()
-  inv <- solve(matr, ...)
+  y <- x$get()
+  inv <- solve(y, ...)
   x$setmatrix <- inv
   inv
 }
